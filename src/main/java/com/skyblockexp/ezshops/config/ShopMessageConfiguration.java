@@ -299,12 +299,20 @@ public final class ShopMessageConfiguration {
             public String mustHoldItem() {
                 return string("commands.sell-hand.must-hold-item", "&cYou must hold an item to use this command.");
             }
+
+            public String notInRotation() {
+                return string("commands.sell-hand.not-in-rotation", "&cThat item is not available in the current shop rotation.");
+            }
         }
 
         public final class SellInventoryCommandMessages {
 
             public String playersOnly() {
                 return string("commands.sell-inventory.players-only", "&cOnly players can sell items.");
+            }
+
+            public String notInRotation() {
+                return string("commands.sell-inventory.not-in-rotation", "&cNo sellable items are available in the current shop rotation.");
             }
         }
 
@@ -523,6 +531,10 @@ public final class ShopMessageConfiguration {
 
             public String notSellable() {
                 return string("transactions.errors.not-sellable", "&cThat item cannot be sold to the shop.");
+            }
+
+            public String notInRotation() {
+                return string("transactions.errors.not-in-rotation", "&cThat item is not available in the current shop rotation.");
             }
 
             public String invalidBuyPrice() {

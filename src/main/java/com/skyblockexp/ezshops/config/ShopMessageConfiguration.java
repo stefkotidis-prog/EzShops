@@ -288,6 +288,10 @@ public final class ShopMessageConfiguration {
             public String amountMustBePositive() {
                 return string("commands.shop.amount-positive", "&cAmount must be positive.");
             }
+
+            public String notInRotation() {
+                return string("commands.shop.not-in-rotation", "&cThat item is not available in the current shop rotation.");
+            }
         }
 
         public final class SellHandCommandMessages {

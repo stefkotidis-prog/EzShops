@@ -23,21 +23,54 @@ items:
 
 ## ⚙️ Available Settings Overview
 
-Below is the complete list of configuration options available for each item. These allow you to customize everything from GUI positioning to dynamic pricing behavior.
+Below is the detailed list of configuration options available for each item. This allows you to customize everything from GUI positioning to dynamic pricing behavior.
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `buy` | number | Price to purchase from shop (-1 = not buyable) |
-| `sell` | number | Price received when selling to shop (-1 = not sellable) |
-| `slot` | number | Specific slot position in the category GUI |
-| `material` | string | Valid Minecraft material name |
-| `display-name` | string | Custom name shown in the GUI (supports color codes) |
-| `lore` | list | Multi-line description shown in the item tooltip |
-| `amount` | number | Number of items per single purchase (default: 1) |
-| `permission` | string | Custom permission node required to interact with this item |
-| `stock-market` | boolean | If true, the price will fluctuate based on global stock settings |
-| `dynamic.enabled` | boolean | Enables/disables individual dynamic pricing for this item |
-| `item-type` | string | Delivery method: `ITEM` (default), `COMMAND` (runs a command instead), or `NONE`. |
+### Buy Price (`buy`)
+**Type:** `number`
+The price a player must pay to purchase this item from the shop. Set this to `-1` if you want the item to be unbuyable.
+
+### Sell Price (`sell`)
+**Type:** `number`
+The amount of money a player receives when selling this item to the shop. Set this to `-1` to prevent players from selling it.
+
+### GUI Slot (`slot`)
+**Type:** `number`
+The specific slot position in the category GUI where this item will appear.
+
+### Material (`material`)
+**Type:** `string`
+The valid Minecraft Material name (e.g., `DIAMOND_SWORD`, `STONE`).
+
+### Display Name (`display-name`)
+**Type:** `string`
+A custom name for the item shown in the GUI. This fully supports standard Minecraft color codes.
+
+### Lore (`lore`)
+**Type:** `list`
+A multi-line description shown when a player hovers over the item in the GUI.
+
+### Amount (`amount`)
+**Type:** `number`
+The stack size given per single purchase (Default is 1).
+
+### Permission (`permission`)
+**Type:** `string`
+A custom permission node required for a player to interact with (buy/sell) this item.
+
+### Stock Market (`stock-market`)
+**Type:** `boolean`
+If set to `true`, this item's price will fluctuate based on the global stock market volatility and demand settings.
+
+### Dynamic Pricing (`dynamic.enabled`)
+**Type:** `boolean`
+Enables or disables individual supply/demand dynamic pricing specifically for this item.
+
+### Item Type (`item-type`)
+**Type:** `string`
+Defines the delivery method of the purchase. 
+- `ITEM` (default): Gives the physical item.
+- `COMMAND`: Does not give an item, but executes commands configured in `on-buy`.
+- `NONE`: Charges the player but delivers nothing (useful for custom external triggers).
 
 ---
 

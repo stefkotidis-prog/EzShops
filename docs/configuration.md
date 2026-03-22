@@ -26,4 +26,4 @@ Change languages and customize every message sent to your players.
 ---
 
 ## ❓ Need More Help?
-If you can't find what you're looking for, check the [Main README](../README.md) or join our community Discord.
+If you can't find what you're looking for, check the [Main README](../README.md) or join our community Discord: [https://discord.gg/yWP95XfmBS](https://discord.gg/yWP95XfmBS).

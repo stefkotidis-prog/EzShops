@@ -22,6 +22,13 @@ plugins/EzShops/
 
 ## 📈 Dynamic Pricing
 
+Dynamic pricing creates a living economy by adjusting item prices based on player activity.
+
+**How does it refresh?**
+- When players **sell** an item repeatedly, the supply increases, and the price **drops**.
+- When players **buy** an item, the demand increases, and the price **rises**.
+- **Normalization:** Prices do not stay low forever. Over time, as activity balances out, prices naturally trend back to their original base value defined in `shop.yml`.
+
 ```yaml
 dynamic-pricing:
   # Enable automatic price adjustments based on supply/demand
@@ -65,6 +72,8 @@ player-shops:
 
 ## 📉 Stock Market & Price Calculation
 
+*(For a full deep-dive into the Stock Market system, check out the [Stock Market Documentation](../shops/pricing/stock-market.md))*
+
 **Version 2.0.0+ Security Improvements:**
 - All stock sales now require confirmation through a GUI
 - Fixed infinite money glitch vulnerability
@@ -95,5 +104,3 @@ The stock market calculates price fluctuations using the following formula:
 ```text
 New price = max(min-price, current price × (1 + (demand × demand-multiplier) + random volatility))
 ```
-
-> **Important:** In version 2.0.0+, all stock selling operations require player confirmation through a dedicated GUI. This prevents accidental sales and exploit abuse. The old instant-sell behavior has been completely removed.

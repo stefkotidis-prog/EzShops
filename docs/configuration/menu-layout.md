@@ -1,12 +1,12 @@
 # 🖥️ Shop Menu Layout (menu.yml)
 
-Customize how your shop looks to the players. You can change titles, inventory sizes, and navigation buttons.
+Customize the visual appearance of your shop. You can adjust the GUI size, titles, and filler items to match your server's theme.
 
 ---
 
-## 🧭 Menu Settings
+## 🧭 Basic Menu Settings
 
-Configure the basic GUI appearance in `shop/menu.yml`.
+Configure the primary GUI properties in `shop/menu.yml`.
 
 ```yaml
 menu:
@@ -18,3 +18,4 @@ menu:
   filler:
     enabled: true
     material: GRAY_STAINED_GLASS_PANE
+```
